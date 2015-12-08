@@ -1,3 +1,7 @@
+html {
+	font-size: 18px;
+}
+
 label {
 	display: inline-block;
 	font-weight: bold;
