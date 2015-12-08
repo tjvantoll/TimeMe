@@ -1,0 +1,91 @@
+label {
+	display: inline-block;
+	font-weight: bold;
+	font-size: 1.2rem;
+}
+.k-formatted-value.k-input, .k-numeric-wrap {
+	font-size: 2rem;
+}
+.container {
+	padding: 1em;
+}
+.input-container {
+	display: flex;
+}
+
+.k-input {
+	width: 100%;
+}
+.k-numeric-wrap .k-select {
+	width: 50px;
+}
+
+.second {
+	margin-left: 1rem;
+	margin-right: 1rem;
+}
+.k-numerictextbox .k-link {
+	border-width: 0 0 1px 1px;
+	border-style: solid;
+	border-color: #e6e6e6;
+}
+.k-numerictextbox .k-link:last-child {
+	border-bottom-width: 0;
+}
+.running .k-link {
+	display: none;
+}
+
+.k-numeric-wrap:not(.k-state-disabled) {
+	background: white !important;
+}
+.k-numeric-wrap.k-state-focused > .k-select {
+	background: none;
+}
+.k-numeric-wrap .k-link.k-state-selected {
+	background: #ebebeb;
+}
+
+.k-button {
+	padding: 1rem 0;
+	width: 100%;
+}
+#start-button, #stop-button {
+	margin-bottom: 1em;
+}
+#stop-button {
+	background: #F44336;
+	color: white;
+	border: none;
+	display: none;
+}
+
+.k-icon {
+	display: none;
+}
+.k-select .k-link {
+	font-family: "FontAwesome";
+}
+.k-select .k-link::before {
+	font-size: 1.2rem;
+}
+.k-select .k-link:first-child::before {
+	content: "\f0de";
+}
+.k-select .k-link:last-child::before {
+	content: "\f0dd";
+	position: relative;
+	top: -0.5rem;
+}
+
+@media (max-width: 700px) {
+	label {
+		margin-top: 1rem;
+	}
+	.second {
+		margin: 0;
+	}
+	.input-container {
+		display: block;
+	}
+}
