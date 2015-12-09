@@ -1,13 +1,13 @@
 var version = "2.0::";
 var offlineResources = [
-	"css/kendo.common-material.min.css",
-	"css/kendo.material.min.css",
-	"font-awesome/css/font-awesome.min.css",
-	"font-awesome/fonts/fontawesome-webfont.woff2",
-	"css/app.css",
-	"js/jquery.min.js",
-	"js/kendo.custom.min.js",
-	"js/app.js"
+	"/css/kendo.common-material.min.css",
+	"/css/kendo.material.min.css",
+	"/font-awesome/css/font-awesome.min.css",
+	"/font-awesome/fonts/fontawesome-webfont.woff2",
+	"/css/app.css",
+	"/js/jquery.min.js",
+	"/js/kendo.custom.min.js",
+	"/js/app.js"
 ];
 self.addEventListener("install", function(event) {
 	event.waitUntil(
