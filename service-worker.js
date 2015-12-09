@@ -1,6 +1,13 @@
-var version = "1.0::";
+var version = "2.0::";
 var offlineResources = [
-	"/"
+	"css/kendo.common-material.min.css",
+	"css/kendo.material.min.css",
+	"font-awesome/css/font-awesome.min.css",
+	"font-awesome/fonts/fontawesome-webfont.woff2",
+	"css/app.css",
+	"js/jquery.min.js",
+	"js/kendo.custom.min.js",
+	"js/app.js"
 ];
 self.addEventListener("install", function(event) {
 	event.waitUntil(
@@ -29,18 +36,10 @@ self.addEventListener("activate", function(event) {
 
 self.addEventListener("fetch", function(event) {
 	var request = event.request;
-	var url = new URL(request.url);
 	event.respondWith(
 		caches.match(request)
 			.then(function(response) {
-				var copy = request.clone();
-				caches.open(version + "static")
-					.then(function(cache) {
-						cache.put(clone, response);
-					})
-			})
-			.catch(function() {
-				return fetch(request);
+				return response || fetch(request);
 			})
 	);
 });
