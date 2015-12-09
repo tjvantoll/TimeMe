@@ -1,16 +1,23 @@
+function blurActiveElement() {
+	document.activeElement.blur();
+}
+
 var hoursWidget = $("#hours").kendoNumericTextBox({
 	format: "0#",
-	min: 0
+	min: 0,
+	spin: blurActiveElement
 }).data("kendoNumericTextBox");
 var minutesWidget = $("#minutes").kendoNumericTextBox({
 	format: "0#",
 	min: 0,
-	max: 59
+	max: 59,
+	spin: blurActiveElement
 }).data("kendoNumericTextBox");
 var secondsWidget = $("#seconds").kendoNumericTextBox({
 	format: "0#",
 	min: 0,
-	max: 59
+	max: 59,
+	spin: blurActiveElement
 }).data("kendoNumericTextBox");
 
 var stopButton = $("#stop-button");

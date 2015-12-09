@@ -3,6 +3,7 @@ html {
 }
 
 label {
+	color: #444;
 	display: inline-block;
 	font-weight: bold;
 	font-size: 1.2rem;
@@ -83,6 +84,9 @@ label {
 }
 
 @media (max-width: 700px) {
+	html {
+		font-size: 15px;
+	}
 	label {
 		margin-top: 1rem;
 	}
