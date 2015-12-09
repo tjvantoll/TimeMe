@@ -33,13 +33,3 @@ self.addEventListener("activate", function(event) {
 		})
 	);
 });
-
-self.addEventListener("fetch", function(event) {
-	var request = event.request;
-	event.respondWith(
-		caches.match(request)
-			.then(function(response) {
-				return response || fetch(request);
-			})
-	);
-});
