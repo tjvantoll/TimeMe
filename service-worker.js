@@ -14,12 +14,15 @@ self.addEventListener("install", function(event) {
 		caches
 			.open(version + "static")
 			.then(function(cache) {
+				console.log("1");
 				cache.addAll(offlineResources);
+				console.log("2");
 			})
 	);
 });
 
 self.addEventListener("activate", function(event) {
+	console.log("3");
 	event.waitUntil(
 		caches.keys().then(function(keys) {
 			return Promise.all(keys
@@ -32,4 +35,5 @@ self.addEventListener("activate", function(event) {
 			);
 		})
 	);
+	console.log("4");
 });
