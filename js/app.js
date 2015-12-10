@@ -118,8 +118,6 @@ $("#reset-button")
 		reset();
 	});
 
-$("label").on("click", function() {
-	var id = $(this).attr("for");
-	var element = $("[id=" + id + "]");
-	element.data("kendoNumericTextBox").focus();
+$("input").on("focus", function(event) {
+	$(this).blur();
 });
