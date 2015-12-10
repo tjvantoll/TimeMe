@@ -10,5 +10,7 @@
   ],
   "start_url": "/",
   "display": "fullscreen",
-  "orientation": "portrait"
+  "orientation": "portrait",
+  "start_url": "/TimeMe",
+  "scope": "/TimeMe"
 }
