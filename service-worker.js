@@ -40,10 +40,7 @@ self.addEventListener("fetch", function(event) {
 	event.respondWith(
 		caches.match(request)
 			.then(function(request) {
-				return request;
-			})
-			.catch(function() {
-				return fetch(request);
+				return request || fetch(request);
 			})
 	);
 });
