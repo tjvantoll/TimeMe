@@ -1,23 +1,16 @@
-function blurActiveElement() {
-	document.activeElement.blur();
-}
-
 var hoursWidget = $("#hours").kendoNumericTextBox({
-	format: "0#",
-	min: 0,
-	spin: blurActiveElement
+	format: "#",
+	min: 0
 }).data("kendoNumericTextBox");
 var minutesWidget = $("#minutes").kendoNumericTextBox({
-	format: "0#",
+	format: "#",
 	min: 0,
-	max: 59,
-	spin: blurActiveElement
+	max: 59
 }).data("kendoNumericTextBox");
 var secondsWidget = $("#seconds").kendoNumericTextBox({
-	format: "0#",
+	format: "#",
 	min: 0,
-	max: 59,
-	spin: blurActiveElement
+	max: 59
 }).data("kendoNumericTextBox");
 
 var stopButton = $("#stop-button");
@@ -74,6 +67,7 @@ function reset() {
 	hoursWidget.enable();
 	minutesWidget.enable();
 	secondsWidget.enable();
+	disableAllInputs();
 
 	stopTicking();
 
@@ -88,7 +82,7 @@ $("#start-button")
 		hours = hoursWidget.value();
 		minutes = minutesWidget.value();
 		seconds = secondsWidget.value();
-	
+
 		startingHours = hours;
 		startingMinutes = minutes;
 		startingSeconds = seconds;
@@ -118,6 +112,8 @@ $("#reset-button")
 		reset();
 	});
 
-$("input").on("focus", function(event) {
-	$(this).blur();
-});
+function disableAllInputs() {
+	$("input").prop("disabled", true);
+}
+
+disableAllInputs();

@@ -11,9 +11,16 @@ label {
 .k-formatted-value.k-input, .k-numeric-wrap {
 	font-size: 2rem;
 }
-.container {
-	padding: 1em;
+.k-numeric-wrap.k-state-hover, .k-numeric-wrap.k-state-focused {
+	box-shadow: none;
 }
+.container {
+	padding: 1rem;
+}
+.input-container {
+	padding-top: 0;
+}
+
 .input-container {
 	display: flex;
 }
@@ -87,6 +94,8 @@ label {
 	html {
 		font-size: 15px;
 	}
+}
+@media (max-width: 475px) {
 	label {
 		margin-top: 1rem;
 	}
