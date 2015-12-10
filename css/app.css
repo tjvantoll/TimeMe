@@ -10,6 +10,7 @@ label {
 }
 input:disabled {
 	-webkit-text-fill-color: #444;
+	-webkit-opacity: 1;
 }
 .k-formatted-value.k-input, .k-numeric-wrap {
 	font-size: 2rem;
